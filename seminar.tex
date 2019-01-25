@@ -2,9 +2,9 @@
 
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage{appendixnumberbeamer}
-
+\usepackage{graphicx}	
 \usepackage{booktabs}
-\usepackage[scale=2]{ccicons}
+\usepackage[scale=1]{ccicons}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
@@ -24,13 +24,72 @@
 
 \maketitle
 
-
-
 \section{Uvod}
+\begin{frame}{Gitflow}
 
+Gitflow je posebna vrsta workflow-a.
 
+Dizajniran je tako da striktno definira početne grane na kojemu se cijeli projekt bazira.
 
+Pruža framework koji je efikasan za velike projekte, ili projekte koji imaju vremenski rok.
 
+Stirktno definira ulogu svake grane.
+\end{frame}
+\begin{frame}{Gitflow}
+Gitflow korsti sve normalne funkcije git-a uz svoje nadogradnje.
 
+U gitflow projektima se definira pojedinaćna grana za sve.
 
+Npr. \textit{bugfix},\textit{hotfix}, \textit{feature} i sl.
+
+Glavna grana na kojoj se radi je \textit{develop} i na nju se nadovezuju ostale grane poput vec navedenih.
+
+Kada je projekt spreman, \textit{develop} grana se spaja u \textit{master} granu
+
+\end{frame}
+\begin{frame}{Gitflow}
+Da bi se uopće moglo raditi na projektu uz Gitflow potrebno ga je prvo instalirati.
+
+Jer je to zapravo nadogradnja na postojeći Git.
+
+Instalacija je jednostavna, za OSX sisteme se može koristiti naredba \textit{brew install git-low}, a za Windows OS klasičnim preuzimanjem i instaliranjem.
+
+Za inicijaizaciju Gitflow projekta umjesto \textit{git init}, koristi se \textit{git flow init}.
+
+Ne mijenja ništa u projektu osim što stvara unaprijed definirane grane.
+\end{frame}
+\begin{frame}{Gitflow grane}
+Umjesto uobičajene jedne glavne \textit{master} grane, Gitflow koristi dvije.
+Druga je \textit{develop} grana.
+
+{
+\setlength{\fboxsep}{1pt}
+\setlength{\fboxrule}{1pt}
+\fbox{\includegraphics[width=11cm, height=4cm]{master_develop}}
+}
+
+\end{frame}
+\begin{frame}{Gitflow grane}
+\textit{Develop} grana je ona na kojoj se odvija većina projekta, iz koje se stvaraju i vraćaju nove grane.
+
+Za objavljivanje tj. završavanje projekta sve se spaja u \textit{develop} granu.
+
+Zbog ovog načina workflow-a poželjno je svaku objavu ili commit tagirati.
+
+Ovako se bilježi cijela povijest razvoja projekta ili programa.
+
+Na repozitoriju treba postojati develop grana koju svi developeri prate.
+
+\end{frame}
+\begin{frame}{Gitflow grane}
+Svaki feature,bugfix ili hotfix koji se napravi za vrijeme projekta bi trebao biti na zasebnoj grani koja se može gurnuti na repozitorij
+
+Kada se feature završi, razlika je u tome što se spaja sa granom \textit{develop}, a ne \textit{master}.
+
+{
+\setlength{\fboxsep}{1pt}
+\setlength{\fboxrule}{1pt}
+\fbox{\includegraphics[width=10cm, height=4cm]{feature}}
+}
+\end{frame}
 \end{document}
