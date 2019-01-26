@@ -1,6 +1,0 @@
-\frametitle{Sections}
-Sections group slides of the same topic
-
-  \begin{verbatim}    \section{Elements}\end{verbatim}
-
-  for which \themename provides a nice progress indicator \ldots
