@@ -115,4 +115,18 @@ Ako želimo napraviti \textit{hotfix} granu, možemo na 2 načina ovisno da li i
 
 Nakon što smo gotovi sa \textit{hotfix} granom samo ju spajamo sa drugim granama te ju nakon toga obrišemo.
 \end{frame}
+\begin{frame}{Ukratko gitflow}
+Gitflow je izvrstan za korištenje kod razvijanja softwarea koji se bazira na izdanjima, tj. verzijama i ima zasebnu granu na kojoj se mogu vršiti mali popravci i izmjene,
+
+Radni tijek u gitflow-u ukratko je:
+\begin{enumerate}
+    \item \textit{develop} grana se stvara od \textit{master} grane
+    \item \textit{release} grana se stvara od \textit{develop} grane
+    \item \textit{feature} grane se stvaraju od \textit{develop} grane
+    \item Kada je novi \textit{feature} gotov spaja se u \textit{develop} granu
+    \item Kada je \textit{release} gotov spaja se u \textit{develop} i \textit{master} grane
+    \item Ako se nađe greška u \textit{master} grani onda se stvara nova \textit{hotfix} grana
+    \item Kada je greška otklonjena u \textit{hotfix} grani, ponovno se spaja u \textit{master} i \textit{develop} grane
+\end{enumerate}
+\end{frame}
 \end{document}
