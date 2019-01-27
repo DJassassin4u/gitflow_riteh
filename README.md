@@ -1,12 +1,12 @@
 # gitflow_riteh
-Seminar - tema: Gitflow -
+Seminar - tema: Gitflow 
 
-Voditelj: Dorian Janžetić -
+Voditelj: Dorian Janžetić 
 
 Članovi: 
 
-  Dorian Janžetić  - 25 % , 
+  Dorian Janžetić  - 15 % , 
   
-  Antonio Babić    - 20 % , 
+  Antonio Babić    - 5 % , 
   
-  Antonio Puhanić  - 55 % , 
+  Antonio Puhanić  - 80 % , 
