@@ -5,8 +5,8 @@ Voditelj: Dorian Janžetić
 
 Članovi: 
 
-  Dorian Janžetić  - 15 % , 
+  Dorian Janžetić  - 20 % , 
   
-  Antonio Babić    - 5 % , 
+  Antonio Babić    - 20 % , 
   
-  Antonio Puhanić  - 80 % , 
+  Antonio Puhanić  - 60 % , 
