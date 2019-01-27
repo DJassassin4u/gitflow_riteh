@@ -85,17 +85,80 @@ Ovako se bilježi cijela povijest razvoja projekta ili programa.
 Na repozitoriju treba postojati develop grana koju svi developeri prate.
 
 \end{frame}
-\begin{frame}{Gitflow grane}
-Svaki feature,bugfix ili hotfix koji se napravi za vrijeme projekta bi trebao biti na zasebnoj grani koja se može gurnuti na repozitorij
 
-Kada se feature završi, razlika je u tome što se spaja sa granom \textit{develop}, a ne \textit{master}.
+\begin{frame}{Feature grana}
+
+Kad god radimo na novoj značajci (\textit{featureu}) stvaramo novu \textit{Feature} granu koja se grana iz \textit{Develop} grane. Kada napravimo značajku spajmo ju sa \textit{Develop} granom.
+Feature grane se \textbf{nikad] ne spajaju direktno u master granu.
 
 {
 \setlength{\fboxsep}{1pt}
 \setlength{\fboxrule}{1pt}
 \fbox{\includegraphics[width=10cm, height=4cm]{feature}}
 }
+
 \end{frame}
+
+\begin{frame}{Korištenje feature grane}
+
+ako nemamo git-flow ekstenzije:
+Stvaranje grane:
+git checkout develop
+git merge feature_branch
+Spajanje grane:
+git checkout develop
+git merge feature_branch
+
+ako imamo git-flow ekstenzije:
+Stvaranje grane:
+git flow feature start feature_branch
+Spajanje grane:
+git flow feature finish feature_branch
+
+\end{frame}
+
+\begin{frame}{Release grana}
+
+Kada smo blizu izdavanju nove verzije \textit{forkanjem} \textit{Develop} grane stvaramo \textit{Release} granu.
+U ovu granu se smiju dodavati samo \textit{bug fixovi} i dokumentacija vezana za izdavanje nove verzije. Ne smiju se dodavati nikakve nove značajke.
+
+{
+\setlength{\fboxsep}{1pt}
+\setlength{\fboxrule}{1pt}
+\fbox{\includegraphics[width=9cm, height=4.5cm]{release}}
+}
+
+\end{frame}
+
+\begin{frame}{Release grana}
+
+Prednost ovakvog pristupa je u tome što dio tima može nastaviti raditi na značajkama za sljedeću verziju dok drugi dio tima dovršava detalje vezane uz verziju koja uskoro izlazi.
+Kada dovršimo \textit{Release} granu spajamo ju i s \textit{Master} i s \textit{Develop} granom. S \textit{Develop} granom ju spajamo jer je moguće da smo dodali bitna ažuriranja na \textit{Release} granu koja želimo imati uključena u daljni razvoj projekata.
+
+\end{frame}
+
+
+\begin{frame}{Korištenje release grane}
+
+ako nemamo git-flow ekstenzije:
+Stvaranje grane:
+git checkout develop
+git checkout -b release/0.1.0
+Spajanje grane:
+git checkout develop
+git merge release/0.1.0
+
+ako imamo git-flow ekstenzije:
+Stvaranje grane:
+git flow release start 0.1.0
+Switched to a new branch 'release/0.1.0'
+Spajanje grane:
+git checkout master
+git checkout merge release/0.1.0
+git flow release finish '0.1.0'
+
+\end{frame}
+
 \begin{frame}{Hotfix grana}
 Još jedna vrsta grane u Gitflow-u je \textit{hotfix} grana, te služi za održavanje ili hitne izmjene.
 
@@ -109,7 +172,7 @@ Nakon što je popravak ili izmjena gotova \textit{hotfix} grana se spaja (merge)
 }
 \end{frame}
 \begin{frame}{Korištenje hotfix grane}
-Ako želimo napraviti \textit{hotfix} granu, možemo na 2 načina ovisno da li imamo git-flow ekstenziju:
+Ako želimo napraviti \textit{hotfix} granu, možemo na 2 načina ovisno imamo li git-flow ekstenziju:
 
 - bez git-flow ext.: \textbf{git checkout master}
 
