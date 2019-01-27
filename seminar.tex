@@ -38,9 +38,9 @@ Stirktno definira ulogu svake grane.
 \begin{frame}{Gitflow}
 Gitflow korsti sve normalne funkcije git-a uz svoje nadogradnje.
 
-U gitflow projektima se definira pojedinaćna grana za sve.
+U gitflow projektima se definira pojedinačna grana za sve.
 
-Npr. \textit{bugfix},\textit{hotfix}, \textit{feature} i sl.
+Npr: \textit{bugfix},\textit{hotfix}, \textit{feature} i sl.
 
 Glavna grana na kojoj se radi je \textit{develop} i na nju se nadovezuju ostale grane poput vec navedenih.
 
@@ -91,5 +91,12 @@ Kada se feature završi, razlika je u tome što se spaja sa granom \textit{devel
 \setlength{\fboxrule}{1pt}
 \fbox{\includegraphics[width=10cm, height=4cm]{feature}}
 }
+\end{frame}
+\begin{frame}{Hotfix grana}
+Još jedna vrsta grane u Gitflow-u je \textit{hotfix} grana, te služi za održavanje ili hitne izmjene.
+
+\textit{Hotfix} grana je slična \textit{release} ili \textit{feature} grani, samo što se bazira na \textit{master} grani umjesto \textit{develop} grani.
+
+Nakon što je popravak ili izmjena gotova \textit{hotfix} grana se spaja (merge) sa \textit{master} i \textit{develop} granama, te \textit{master} grana dobiva novi broj verzije.
 \end{frame}
 \end{document}
