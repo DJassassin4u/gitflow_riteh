@@ -1,15 +1,18 @@
 \documentclass[10pt]{beamer}
-
+%!TEX root = ../main.tex
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage{appendixnumberbeamer}
 \usepackage{graphicx}	
 \usepackage{booktabs}
 \usepackage[scale=1]{ccicons}
-
+\usepackage{url}
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
-
+\usepackage{hyperref}
 \usepackage{xspace}
+\usepackage[utf8]{inputenc}
+\usepackage[croatian]{babel}
+\usepackage[nottoc]{tocbibind}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
 \title{Seminar}
@@ -33,9 +36,10 @@ Dizajniran je tako da striktno definira početne grane na kojemu se cijeli proje
 
 Pruža framework koji je efikasan za velike projekte, ili projekte koji imaju vremenski rok.
 
-Stirktno definira ulogu svake grane.
+Stirktno definira ulogu svake grane.\nocite{}
 \end{frame}
 \begin{frame}{Gitflow}
+
 Gitflow korsti sve normalne funkcije git-a uz svoje nadogradnje.
 
 U gitflow projektima se definira pojedinačna grana za sve.
@@ -44,7 +48,7 @@ Npr: \textit{bugfix},\textit{hotfix}, \textit{feature} i sl.
 
 Glavna grana na kojoj se radi je \textit{develop} i na nju se nadovezuju ostale grane poput vec navedenih.
 
-Kada je projekt spreman, \textit{develop} grana se spaja u \textit{master} granu
+Kada je projekt spreman, \textit{develop} grana se spaja u \textit{master} granu.
 
 \end{frame}
 \begin{frame}{Gitflow}
@@ -125,8 +129,15 @@ Radni tijek u gitflow-u ukratko je:
     \item \textit{feature} grane se stvaraju od \textit{develop} grane
     \item Kada je novi \textit{feature} gotov spaja se u \textit{develop} granu
     \item Kada je \textit{release} gotov spaja se u \textit{develop} i \textit{master} grane
-    \item Ako se nađe greška u \textit{master} grani onda se stvara nova \textit{hotfix} grana
+    \item Ako se nadje greška u \textit{master} grani onda se stvara nova \textit{hotfix} grana
     \item Kada je greška otklonjena u \textit{hotfix} grani, ponovno se spaja u \textit{master} i \textit{develop} grane
 \end{enumerate}
 \end{frame}
-\end{document}
+\begin{frame}{Izvori}
+\nocite{Git}
+\nocite{Git1}
+\nocite{Git2}
+\bibliographystyle{plain}
+\bibliography{seminar}
+\end{frame}
+\end{document}	
