@@ -104,4 +104,15 @@ Nakon što je popravak ili izmjena gotova \textit{hotfix} grana se spaja (merge)
 \fbox{\includegraphics[width=9cm, height=4.5cm]{hotfix}}
 }
 \end{frame}
+\begin{frame}{Korištenje hotfix grane}
+Ako želimo napraviti \textit{hotfix} granu, možemo na 2 načina ovisno da li imamo git-flow ekstenziju:
+
+- bez git-flow ext.: \textbf{git checkout master}
+
+\textbf{git checkout -b hotfix\_branch}
+                         
+- sa git-flow ext.:  \textbf{git flow hotfix start hotfix\_branch}
+
+Nakon što smo gotovi sa \textit{hotfix} granom samo ju spajamo sa drugim granama te ju nakon toga obrišemo.
+\end{frame}
 \end{document}
